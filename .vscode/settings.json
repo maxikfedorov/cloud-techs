@@ -1,0 +1,25 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        ".vscode": true,
+        "src/tempCodeRunnerFile.py": true,
+        "src/scripts/__pycache__": true,
+        "src/web/node_modules": true,
+        "src/web/package-lock.json": true,
+        "src/scripts/tempCodeRunnerFile.py": true
+    },
+    "hide-files.files": [
+        ".vscode",
+        "src/tempCodeRunnerFile.py",
+        "src/scripts/__pycache__",
+        "src/web/node_modules",
+        "src/web/package-lock.json",
+        "src/scripts/tempCodeRunnerFile.py"
+    ],
+    "postman.settings.dotenv-detection-notification-visibility": false
+}
