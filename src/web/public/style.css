@@ -1,18 +1,18 @@
-/* Общий стиль */
+
 body {
-    font-family: 'Courier New', Courier, monospace; /* Шрифт в стиле брутализма */
-    background-color: #ffffff; /* Белый фон */
-    color: #000000; /* Черный текст */
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #ffffff;
+    color: #000000;
 }
 
-/* Модальное окно */
+
 .modal-content {
-    border: 3px solid black; /* Толстая черная рамка для модального окна */
-    background-color: #ffffff; /* Белый фон */
+    border: 3px solid black;
+    background-color: #ffffff;
 }
 
 .modal-header {
-    border-bottom: 3px solid black; /* Черная линия-разделитель */
+    border-bottom: 3px solid black;
 }
 
 .modal-title {
@@ -24,25 +24,25 @@ body {
     padding: 20px;
 }
 
-/* Сетка галереи */
+
 #imageGalleryGrid .card {
-    border: 3px solid black; /* Толстая черная рамка для каждой карточки */
-    background-color: #f2f2f2; /* Светло-серый фон карточки */
+    border: 3px solid black;
+    background-color: #f2f2f2;
     transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 #imageGalleryGrid .card:hover {
-    transform: scale(1.05); /* Легкое увеличение при наведении */
-    background-color: #e6e6e6; /* Темнее при наведении */
+    transform: scale(1.05);
+    background-color: #e6e6e6;
 }
 
 #imageGalleryGrid img {
     height: 200px;
     object-fit: cover;
-    border-bottom: 3px solid black; /* Черная линия между изображением и текстом */
+    border-bottom: 3px solid black;
 }
 
-/* Текст в карточке */
+
 #imageGalleryGrid .card-body {
     text-align: center;
 }
@@ -52,17 +52,17 @@ body {
     font-weight: bold;
 }
 
-/* Кнопки в карточках галереи */
+
 #imageGalleryGrid .btn {
     font-size: 1rem;
     font-weight: bold;
-    border: 3px solid black; /* Толстая черная рамка кнопки */
-    background-color: #ffffff; /* Белый фон кнопки */
-    color: #000000; /* Черный текст кнопки */
+    border: 3px solid black;
+    background-color: #ffffff;
+    color: #000000;
     transition: all 0.2s ease-in-out;
 }
 
 #imageGalleryGrid .btn:hover {
-    background-color: black; /* Черный фон при наведении */
-    color: white; /* Белый текст при наведении */
+    background-color: black;
+    color: white;
 }

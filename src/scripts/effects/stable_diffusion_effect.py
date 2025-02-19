@@ -22,20 +22,20 @@ def apply_stable_diffusion(image: np.ndarray, prompt=PROMPT, strength=0.5, guida
     :param guidance_scale: Масштаб управления стилем.
     :return: Обработанное изображение в формате NumPy (OpenCV).
     """
-    # Сохраняем исходные размеры изображения
+    
     original_height, original_width = image.shape[:2]
 
-    # Преобразуем изображение из NumPy в PIL.Image
+    
     pil_image = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
 
-    # Загружаем модель Stable Diffusion
+    
     pipeline = StableDiffusionImg2ImgPipeline.from_pretrained("runwayml/stable-diffusion-v1-5")
-    pipeline.to("cuda")  # Используем GPU, если доступно
+    pipeline.to("cuda")  
 
-    # Изменяем размер изображения до 512x512 (требование модели)
+    
     resized_image = pil_image.convert("RGB").resize((512, 512))
 
-    # Применяем текстовый prompt через модель
+    
     result = pipeline(
         prompt=prompt,
         image=resized_image,
@@ -43,10 +43,10 @@ def apply_stable_diffusion(image: np.ndarray, prompt=PROMPT, strength=0.5, guida
         guidance_scale=guidance_scale
     ).images[0]
 
-    # Масштабируем результат обратно к исходным размерам
+    
     result_resized = result.resize((original_width, original_height), Image.LANCZOS)
 
-    # Преобразуем результат из PIL.Image обратно в NumPy (OpenCV)
+    
     result_np = cv2.cvtColor(np.array(result_resized), cv2.COLOR_RGB2BGR)
 
     return result_np

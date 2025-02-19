@@ -245,8 +245,5 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
-
-
-
     await loadEffects(); // Загружаем эффекты при загрузке страницы
 });

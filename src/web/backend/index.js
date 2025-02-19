@@ -4,7 +4,7 @@ const cors = require('cors');
 const morgan = require('morgan');
 const multer = require('multer');
 const { connectDB, Image } = require('./db');
-const axios = require('axios'); // Добавьте эту строку для импорта axios
+const axios = require('axios'); 
 
 require('dotenv').config();
 
@@ -17,11 +17,12 @@ const EFFECTS = [
     { key: 'grayscale', name: 'Оттенки серого' },
     { key: 'edges', name: 'Обнаружение краёв' },
     { key: 'sepia', name: 'Сепия' },
-    { key: 'inversion', name: 'Инверсия цветов' }, // Новый эффект
-    { key: 'blue_boost', name: 'Усиление синего' }, // Новый эффект
-    { key: 'warm_filter', name: 'Тёплый фильтр' }, // Новый эффект
+    { key: 'inversion', name: 'Инверсия цветов' }, 
+    { key: 'blue_boost', name: 'Усиление синего' }, 
+    { key: 'warm_filter', name: 'Тёплый фильтр' }, 
     { key: 'stable_diffusion', name: 'Stable Diffusion' },
-    { key: 'object_detection', name: 'Детекция объектов' }
+    { key: 'object_detection', name: 'Детекция объектов' },
+    { key: 'color_grid', name: 'Цветовая сетка' }
 ];
 
 // Подключение к базе данных
