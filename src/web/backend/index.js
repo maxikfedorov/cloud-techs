@@ -22,7 +22,9 @@ const EFFECTS = [
     { key: 'warm_filter', name: 'Тёплый фильтр' }, 
     { key: 'stable_diffusion', name: 'Stable Diffusion' },
     { key: 'object_detection', name: 'Детекция объектов' },
+    { key: 'detection_yolo', name: 'Детекция знаков' },
     { key: 'color_grid', name: 'Цветовая сетка' }
+
 ];
 
 // Подключение к базе данных

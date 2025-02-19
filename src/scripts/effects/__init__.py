@@ -1,3 +1,4 @@
+from .detection_yolo import apply_yolo
 from .blur_effect import apply_blur
 from .grayscale_effect import apply_grayscale
 from .edge_detection_effect import apply_edges as apply_edge_detection
@@ -19,5 +20,6 @@ EFFECTS = {
     "warm_filter": apply_warm_filter,
     "stable_diffusion": apply_stable_diffusion,  
     "object_detection": apply_object_detection,
-    "color_grid": apply_color_grid 
+    "color_grid": apply_color_grid,
+    "detection_yolo": apply_yolo
 }
